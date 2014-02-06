@@ -1,0 +1,43 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                       Application.index
+GET     /playList                               Application.playList
+GET     /musicas                                Application.musicas
+GET     /contato                                Application.contato
+GET     /angular                                Application.angular
+
+GET     /home                                   Streaming.getPage
+
+
+# Users
+
+GET     /users                                  Users.list
+
+POST    /users                                  Users.create
+
+# Musics
+
+GET     /musics                                 Musics.list
+GET     /musics/{id}/url	                    Musics.getUrlMusic
+GET     /musics/{id}	                        Musics.getMusic
+GET     /musics/{id}/music.mp3                  Musics.getMusicMp3
+
+# Secure
+
+GET    /logout                                  WebRadioSecure.signOut
+
+*      /                                        module:secure
+
+WS   /m.mp3                                     MyWebSocket.hello
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}
