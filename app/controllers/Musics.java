@@ -24,7 +24,15 @@ public class Musics extends DefaultController {
 		renderJSON(musica.path);
 	}
 	
-	public static void getMusic(Long id) {
+	public static void getMusic(String filtro) {
+		
+		returnIfNull(filtro);
+		
+		Music music = Music.getMusic(filtro);
+		renderJSON(music);
+	}
+	
+	public static void getMusicById(Long id) {
 		
 		Music musica = Music.findById(id);
 		renderJSON(musica);

@@ -19,7 +19,7 @@ public class WebRadioSecure extends Secure.Security{
 	public static void authenticate() {
 		
 		if(Cache.get(session.getId()) == null) {
-			renderJSON(new Message(MessageType.UNAUTHORIZED, "Usuário não autenticado."));
+			redirect(Play.configuration.getProperty("webradio.authentication.url.error"));
 		}
 	}
 	
