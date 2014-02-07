@@ -7,10 +7,9 @@ import java.io.InputStream;
 import java.util.List;
 
 import models.Music;
-import play.mvc.Controller;
-import play.mvc.Http.Request;
+import play.mvc.With;
 
-//@With(WebRadioSecure.class)
+@With(WebRadioSecure.class)
 public class Musics extends DefaultController {
 
 	public static void list(){
