@@ -1,125 +1,385 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-
-<head><!-- Created by Artisteer v4.1.0.59861 -->
+<html lang="en">
+  <head>
     <meta charset="utf-8">
-    <title>Ínicio</title>
-    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    
-    <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
-    
-    <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/style.responsive.css'}">
-    <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/style.css'}">
-    <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/Battambang_latin.css'}">
-    <link rel="stylesheet" href="@{'/public/stylesheets/app.css'}">
-    <link rel="stylesheet" href="@{'/public/stylesheets/bootstrap.css'}">
+    <title>Web Rádio</title>
 
+    <!-- Bootstrap core CSS -->
+    <link href="@{'/public/css/bootstrap.css'}" rel="stylesheet">
 
-    <script src="@{'/public/javascripts/jquery.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-    <script src="@{'/public/javascripts/script.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-    <script src="@{'/public/javascripts/musicas.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-    <script src="@{'/public/javascripts/script.responsive.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-    <script src="@{'/public/lib/angular/angular.js'}"></script>
-    <script type="text/javascript" src="@{'/public/javascripts/musicas.js'}"></script>
+    <!-- Add custom CSS here -->
+    <link href="@{'/public/css/sb-admin.css'}" rel="stylesheet">
+    <link rel="stylesheet" href="@{'/public/font-awesome/css/font-awesome.min.css'}">
+    <!-- Page Specific CSS -->
+    <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+  </head>
 
+  <body>
 
-    <meta name="description" content="Description">
-    <meta name="keywords" content="Keywords">
+    <div id="wrapper">
 
-
-    <style>.art-content .art-postcontent-0 .layout-item-0 { padding: 10px;  }
-    .art-content .art-postcontent-0 .layout-item-1 { padding-top: 10px;padding-right: 0px;padding-bottom: 10px;padding-left: 10px;  }
-    .art-content .art-postcontent-0 .layout-item-2 { padding: 0px;  }
-    .ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
-    .ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
-
-    </style>
-
-</head>
-<body>
-<div id="art-main">
-<header class="art-header">
-
-
-    <div class="art-shapes">
-<div class="art-object966597160" data-left="0.58%"></div>
-<div class="art-object0" data-left="100%"></div>
-<div id="divBusca">
-    <img src="@{'/public/images/search3.png'}" alt="Buscar..."/>
-    <input type="text" id="txtBusca" placeholder="Buscar..."/>
-    <button id="btnBusca">Buscar</button>
-</div>
-<div class="art-textblock art-object7998138" data-left="3.17%">
-        <div class="art-object7998138-text-container">
-        <div class="art-object7998138-text"><p class="MsoNormal"><br></p></div>
-    </div>
-    
-</div>
-            </div>
-<h1 class="art-headline" data-left="8.21%">
-    <a href="#">WEB Rádio Lavraense</a>
-</h1>
-<nav class="art-nav">
-  <div class="art-nav-inner">
-    <ul class="art-hmenu"><li><a href="/" class="active">Ínicio</a></li>
-    <li><a href="http://localhost:9000/playList">Playlist</a></li><li><a href="http://localhost:9000/musicas">Músicas</a></li>
-    <li><a href="http://localhost:9000/contato">Contato</a></li></ul> 
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">WebRadio</a>
         </div>
-    </nav>
 
-                    
-</header>
-<div class="art-sheet clearfix">
-            <div class="art-layout-wrapper">
-                <div class="art-content-layout">
-                    <div class="art-content-layout-row">
-                        <div class="art-layout-cell art-content"><article class="art-post art-article">
-                                
-                                                
-                <div class="art-postcontent art-postcontent-0 clearfix"><div class="art-content-layout">
-    <div class="art-content-layout-row">
-    <div class="art-layout-cell layout-item-0" style="width: 25%" >
-        <h4>Relaxar...</h4><img width="230" height="185" style="margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; " alt="" class="art-lightbox" src="@{'/public/images/1aa6db94-fd92-4c32-afb6-681a9d691ce9.png'}">
-        <p>Músicas para relaxar e curtir a noite.</p>
-    </div><div class="art-layout-cell layout-item-0" style="width: 25%" >
-        <h4>Tomorrowland</h4><img width="230" height="185" style="margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px;" alt="" class="art-lightbox" src="@{'/public/images/0b31cc81-c0b0-4c39-ae8e-58cf8ae3d8a7.png'}">
-        <p>Set de músicas da tomorrowland</p>
-    </div><div class="art-layout-cell layout-item-0" style="width: 25%" >
-        <h4>Músicas da Copa</h4><img width="230" height="185" style="margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px;" alt="" class="art-lightbox" src="@{'/public/images/e9bfafd8-6dd4-4be3-a3ff-a310f9c49922.png'}">
-        <p>Músicas da Copa FIFA de futebol 2014 no Brasil.</p>
-    </div><div class="art-layout-cell layout-item-1" style="width: 25%" >
-        <h4>Shows</h4><img width="230" height="185" style="margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px;" alt="" class="art-lightbox" src="@{'/public/images/028d93c4-ee33-4f95-8230-ce7d6a6cd411.png'}">
-        
-        <p>Os melhores shows da atualidade.</p>
-    </div>
-    </div>
-</div>
-<div class="art-content-layout">
-    <div class="art-content-layout-row">
-    <div class="art-layout-cell layout-item-2" style="width: 100%" >
-        <h4>Ouça suas músicas a hora e de onde quiser!</h4>
-    </div>
-    </div>
-</div>
-</div>
-                                
-                
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav side-nav">
+            <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i> Músicas</a></li>
+            
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Dropdown Item</a></li>
+                <li><a href="#">Another Item</a></li>
+                <li><a href="#">Third Item</a></li>
+                <li><a href="#">Last Item</a></li>
+              </ul>
+            </li>
+          </ul>
 
-</article></div>
-                    </div>
-                </div>
+          <ul class="nav navbar-nav navbar-right navbar-user">                        
+            <li class="dropdown user-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                <li><a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge">7</span></a></li>
+                <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div id="page-wrapper">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>Web Rádio <small>Statistics Overview</small></h1>
+            <ol class="breadcrumb">
+              <li class="active"><i class="fa fa-dashboard"></i> Web Rádio</li>
+            </ol>
+            <div class="alert alert-success alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              Welcome to SB Admin by <a class="alert-link" href="http://startbootstrap.com">Start Bootstrap</a>! Feel free to use this template for your admin needs! We are using a few different plugins to handle the dynamic tables and charts, so make sure you check out the necessary documentation links provided.
             </div>
-    </div>
-<footer class="art-footer">
-  <div class="art-footer-inner">
-Copyright Web Rádio Lavrense
-   
-  </div>
-</footer>
+          </div>
+        </div><!-- /.row -->
 
-</div>
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <i class="fa fa-comments fa-5x"></i>
+                  </div>
+                  <div class="col-xs-6 text-right">
+                    <p class="announcement-heading">456</p>
+                    <p class="announcement-text">New Mentions!</p>
+                  </div>
+                </div>
+              </div>
+              <a href="#">
+                <div class="panel-footer announcement-bottom">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      View Mentions
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="panel panel-warning">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <i class="fa fa-check fa-5x"></i>
+                  </div>
+                  <div class="col-xs-6 text-right">
+                    <p class="announcement-heading">12</p>
+                    <p class="announcement-text">To-Do Items</p>
+                  </div>
+                </div>
+              </div>
+              <a href="#">
+                <div class="panel-footer announcement-bottom">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      Complete Tasks
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="panel panel-danger">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <i class="fa fa-tasks fa-5x"></i>
+                  </div>
+                  <div class="col-xs-6 text-right">
+                    <p class="announcement-heading">18</p>
+                    <p class="announcement-text">Crawl Errors</p>
+                  </div>
+                </div>
+              </div>
+              <a href="#">
+                <div class="panel-footer announcement-bottom">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      Fix Issues
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <i class="fa fa-comments fa-5x"></i>
+                  </div>
+                  <div class="col-xs-6 text-right">
+                    <p class="announcement-heading">56</p>
+                    <p class="announcement-text">New Orders!</p>
+                  </div>
+                </div>
+              </div>
+              <a href="#">
+                <div class="panel-footer announcement-bottom">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      Complete Orders
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div><!-- /.row -->
 
 
-</body></html>
+          <div class="row">
+          <div class="col-lg-12">            
+            <div class="alert alert-info alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                Abaixo, você pode realizar suas consultas por músicas.
+            </div>
+          </div>
+        </div><!-- /.row -->
+
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>Músicas</h2>
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover tablesorter">
+                <thead>
+                  <tr>
+                    <th>Page <i class="fa fa-sort"></i></th>
+                    <th>Visits <i class="fa fa-sort"></i></th>
+                    <th>% New Visits <i class="fa fa-sort"></i></th>
+                    <th>Revenue <i class="fa fa-sort"></i></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>/index.html</td>
+                    <td>1265</td>
+                    <td>32.3%</td>
+                    <td>$321.33</td>
+                  </tr>                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+        </div><!-- /.row -->
+
+        
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Traffic Sources: October 1, 2013 - October 31, 2013</h3>
+              </div>
+              <div class="panel-body">
+                <div id="morris-chart-donut"></div>
+                <div class="text-right">
+                  <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-clock-o"></i> Recent Activity</h3>
+              </div>
+              <div class="panel-body">
+                <div class="list-group">
+                  <a href="#" class="list-group-item">
+                    <span class="badge">just now</span>
+                    <i class="fa fa-calendar"></i> Calendar updated
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="badge">4 minutes ago</span>
+                    <i class="fa fa-comment"></i> Commented on a post
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="badge">23 minutes ago</span>
+                    <i class="fa fa-truck"></i> Order 392 shipped
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="badge">46 minutes ago</span>
+                    <i class="fa fa-money"></i> Invoice 653 has been paid
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="badge">1 hour ago</span>
+                    <i class="fa fa-user"></i> A new user has been added
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="badge">2 hours ago</span>
+                    <i class="fa fa-check"></i> Completed task: "pick up dry cleaning"
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="badge">yesterday</span>
+                    <i class="fa fa-globe"></i> Saved the world
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <span class="badge">two days ago</span>
+                    <i class="fa fa-check"></i> Completed task: "fix error on sales page"
+                  </a>
+                </div>
+                <div class="text-right">
+                  <a href="#">View All Activity <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-money"></i> Recent Transactions</h3>
+              </div>
+              <div class="panel-body">
+                <div class="table-responsive">
+                  <table class="table table-bordered table-hover table-striped tablesorter">
+                    <thead>
+                      <tr>
+                        <th>Order # <i class="fa fa-sort"></i></th>
+                        <th>Order Date <i class="fa fa-sort"></i></th>
+                        <th>Order Time <i class="fa fa-sort"></i></th>
+                        <th>Amount (USD) <i class="fa fa-sort"></i></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>3326</td>
+                        <td>10/21/2013</td>
+                        <td>3:29 PM</td>
+                        <td>$321.33</td>
+                      </tr>
+                      <tr>
+                        <td>3325</td>
+                        <td>10/21/2013</td>
+                        <td>3:20 PM</td>
+                        <td>$234.34</td>
+                      </tr>
+                      <tr>
+                        <td>3324</td>
+                        <td>10/21/2013</td>
+                        <td>3:03 PM</td>
+                        <td>$724.17</td>
+                      </tr>
+                      <tr>
+                        <td>3323</td>
+                        <td>10/21/2013</td>
+                        <td>3:00 PM</td>
+                        <td>$23.71</td>
+                      </tr>
+                      <tr>
+                        <td>3322</td>
+                        <td>10/21/2013</td>
+                        <td>2:49 PM</td>
+                        <td>$8345.23</td>
+                      </tr>
+                      <tr>
+                        <td>3321</td>
+                        <td>10/21/2013</td>
+                        <td>2:23 PM</td>
+                        <td>$245.12</td>
+                      </tr>
+                      <tr>
+                        <td>3320</td>
+                        <td>10/21/2013</td>
+                        <td>2:15 PM</td>
+                        <td>$5663.54</td>
+                      </tr>
+                      <tr>
+                        <td>3319</td>
+                        <td>10/21/2013</td>
+                        <td>2:13 PM</td>
+                        <td>$943.45</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="text-right">
+                  <a href="#">View All Transactions <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.row -->
+
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+    <script src="@{'/public/js/jquery-1.10.2.js'}"></script>
+    <script src="@{'/public/js/bootstrap.js'}"></script>
+
+    <!-- Page Specific Plugins -->
+    <script src="@{'/public/js/raphael-min.js'}"></script>
+    <script src="@{'/public/js/morris-0.4.3.min.js'}"></script>
+    <script src="@{'/public/js/morris/chart-data-morris.js'}"></script>
+    <script src="@{'/public/js/tablesorter/jquery.tablesorter.js'}"></script>
+    <script src="@{'/public/js/tablesorter/tables.js'}"></script>
+
+  </body>
+</html>
