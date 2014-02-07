@@ -7,7 +7,6 @@ GET     /                                       Application.index
 GET     /playList                               Application.playList
 GET     /musicas                                Application.musicas
 GET     /contato                                Application.contato
-GET     /angular                                Application.angular
 
 GET     /home                                   Streaming.getPage
 

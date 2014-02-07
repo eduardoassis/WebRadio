@@ -7,9 +7,9 @@
     <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
 
     <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <link rel="stylesheet" href="@{'/public/stylesheets/style.css'}" media="screen">
+    <link rel="stylesheet" href="@{'/public/stylesheteets/style.css'}" media="screen">
     <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
-    <link rel="stylesheet" href="@{'/public/stylesheets/style.responsive.css'}" media="all">
+    <link rel="stylesheet" href="@{'/public/stylesheteets/style.responsive.css'}" media="all">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Battambang&amp;subset=latin">
     <link rel="stylesheet" href="@{'/public/stylesheets/app.css'}">
     <link rel="stylesheet" href="@{'/public/stylesheets/bootstrap.css'}">
@@ -17,12 +17,10 @@
 
     <script src="@{'/public/javascripts/jquery.js'}" type="text/javascript" charset="${_response_encoding}"></script>
     <script src="@{'/public/javascripts/script.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+    <script src="@{'/public/javascripts/musicas.js'}" type="text/javascript" charset="${_response_encoding}"></script>
     <script src="@{'/public/javascripts/script.responsive.js'}" type="text/javascript" charset="${_response_encoding}"></script>
     <script src="@{'/public/lib/angular/angular.js'}"></script>
-    <script src="@{'/public/lib/angular/angular-resource.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-    
-    <script src="@{'/public/javascripts/MusicasController.js'}" type="text/javascript" charset="${_response_encoding}"></script>
-    
+    <script type="text/javascript" src="@{'/public/javascripts/controllers.js'}"></script>
 
  
 
@@ -37,7 +35,7 @@
 <div class="art-object966597160" data-left="0.58%"></div>
 <div class="art-object0" data-left="100%"></div>
 <div id="divBusca">
-    <img src="@{'/public/images/search3.png'}" alt="Buscar..."/>
+    <img src="images/search3.png" alt="Buscar..."/>
     <input type="text" id="txtBusca" placeholder="Buscar..."/>
     <button id="btnBusca">Buscar</button>
 </div>
@@ -53,8 +51,21 @@
 </h1>
 <nav class="art-nav">
   <div class="art-nav-inner">
-    <ul class="art-hmenu"><li><a href="http://localhost:9000/" class="">Ínicio</a></li><li><a href="login.html" class="">Login</a></li><li><a href="playlist.html" class="">Playlist</a></li><li><a href="musicas.html" class="active">Músicas</a></li><li><a href="contato.html">Contato</a></li></ul> 
-        </div>
+    <ul class="art-hmenu">
+    	<li>
+    		<a href="/">Ínicio</a>
+    	</li>
+    	<li>
+    		<a href="http://localhost:9000/playList">Playlist</a>
+    	</li>
+    	<li>
+    		<a href="http://localhost:9000/musicas" class="active">Músicas</a>
+    	</li>
+    	<li>
+    		<a href="http://localhost:9000/contato">Contato</a>
+    	</li>
+    </ul> 
+  </div>
     </nav>
 
                     
@@ -66,9 +77,9 @@
                         <div class="art-layout-cell art-content"><article class="art-post art-article">
                                 
                             <ul>
-                                <li ng-repeat="music in musics">            
-                                    Nome: {{music.nome}}
-                                    <p>{{music.artista}}</p>                       
+                                <li ng-repeat="phone in phones">            
+                                    {{phone.name}}
+                                    <p>{{phones.snippet}}</p>                       
                                 </li>       
                             </ul>
 
