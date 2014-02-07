@@ -28,8 +28,25 @@ public class Users extends DefaultController{
 	public static void create(User user){
 		user.email = request.params.get("email");
 		returnIfNull(user);
+		returnIfNull(user.email);
+		returnIfNull(user.name);
+		returnIfNull(user.password);
 		
 		user.save();
 		renderJSON(new Message(MessageType.SUCCESS, "Usuário cadastrado com sucesso."));
+	}
+	
+	public static void delete(Long id){
+		
+		returnIfNull(id);
+		
+		User user = User.findById(id);
+		
+		if (user == null) {
+			renderJSON(new Message(MessageType.ERROR, "Usuário não existente."));
+		} else {
+			user.delete();
+			renderJSON(new Message(MessageType.SUCCESS, "Usuário cadastrado com sucesso."));
+		}
 	}
 }

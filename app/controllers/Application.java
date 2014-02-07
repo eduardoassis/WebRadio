@@ -29,8 +29,4 @@ public class Application extends Controller {
     public static void contato(){
     	render();
     }
-    
-    public static void angular(){
-    	render();
-    }
 }

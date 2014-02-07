@@ -3,9 +3,9 @@ logs/*
 .classpath
 .project
 .settings
+modules/*
 eclipse/*
 lib/*
-modules/*
 test-result/*
 app/tmp/*
 cobertura.ser

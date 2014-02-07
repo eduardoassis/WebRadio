@@ -7,7 +7,6 @@ GET     /                                       Application.index
 GET     /playList                               Application.playList
 GET     /musicas                                Application.musicas
 GET     /contato                                Application.contato
-GET     /angular                                Application.angular
 
 GET     /home                                   Streaming.getPage
 
@@ -16,22 +15,22 @@ GET     /home                                   Streaming.getPage
 
 GET     /users                                  Users.list
 
-POST    /users                                  Users.create
+POST    /users/create                           Users.create
+POST    /users/{id}/delete                      Users.delete
 
 # Musics
 
 GET     /musics                                 Musics.list
 GET     /musics/{id}/url	                    Musics.getUrlMusic
-GET     /musics/{id}	                        Musics.getMusic
+GET     /musics/{id}	                        Musics.getMusicById
 GET     /musics/{id}/music.mp3                  Musics.getMusicMp3
+GET     /music/{filtro}              		    Musics.getMusic
 
 # Secure
 
 GET    /logout                                  WebRadioSecure.signOut
 
 *      /                                        module:secure
-
-WS   /m.mp3                                     MyWebSocket.hello
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
