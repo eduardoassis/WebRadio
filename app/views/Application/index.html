@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="musicasApp">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,10 +15,14 @@
     <link href="@{'/public/css/sb-admin.css'}" rel="stylesheet">
     <link rel="stylesheet" href="@{'/public/font-awesome/css/font-awesome.min.css'}">
     <!-- Page Specific CSS -->
-    <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+    <link rel="stylesheet" href="@{'/public/css/morris-0.4.3.min.css'}">
+    <script src="@{'/public/lib/angular/angular.js'}"></script>
+    <script src="@{'/public/lib/angular/angular-resource.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+    
+    <script src="@{'/public/javascripts/MusicasController.js'}" type="text/javascript" charset="${_response_encoding}"></script>
   </head>
 
-  <body>
+  <body ng-controller="MusicasController">
 
     <div id="wrapper">
 
@@ -206,24 +210,27 @@
           <div class="col-lg-6">
             <h2>Músicas</h2>
             <div class="table-responsive">
-              <table class="table table-bordered table-hover tablesorter">
-                <thead>
-                  <tr>
-                    <th>Page <i class="fa fa-sort"></i></th>
-                    <th>Visits <i class="fa fa-sort"></i></th>
-                    <th>% New Visits <i class="fa fa-sort"></i></th>
-                    <th>Revenue <i class="fa fa-sort"></i></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>/index.html</td>
-                    <td>1265</td>
-                    <td>32.3%</td>
-                    <td>$321.33</td>
-                  </tr>                  
-                </tbody>
-              </table>
+            
+             Search: <input ng-model="query">
+             
+             <table class="table table-bordered table-hover tablesorter">
+               <thead>
+                 <tr>
+                   <th><i class="fa fa-sort"></i></th>
+                   <th>Nome<i class="fa fa-sort"></i></th>
+                   <th>Artista<i class="fa fa-sort"></i></th>
+                   <th>Álbum<i class="fa fa-sort"></i></th>
+                 </tr>
+               </thead>
+               <tbody ng-repeat="music in musics | filter:query">
+               	<tr>
+           			<td>{{music.id}}</td>
+		 			<td>{{music.nome}}</td>
+		 			<td>{{music.artista}}</td>
+		 			<td>{{music.album}}</td>
+                 </tr>                  
+               </tbody>
+             </table>
             </div>
           </div>
           
