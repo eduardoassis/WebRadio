@@ -14,6 +14,7 @@ GET     /home                                   Streaming.getPage
 # Users
 
 GET     /users                                  Users.list
+GET     /users/logged                           Users.getLogged                                  
 
 POST    /users/create                           Users.create
 POST    /users/{id}/delete                      Users.delete

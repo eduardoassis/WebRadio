@@ -25,6 +25,12 @@ public class Users extends DefaultController{
 		renderJSON(users);
 	}
 	
+	public static void getLogged(){
+		User user = WebRadioSecure.getUserAuthenticated();
+		returnIfNull(user);
+		renderJSON(User.findById(user.id));
+	}
+	
 	public static void create(User user){
 		user.email = request.params.get("email");
 		returnIfNull(user);

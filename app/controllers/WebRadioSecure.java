@@ -57,6 +57,10 @@ public class WebRadioSecure extends Secure.Security{
 			
 			hashSessionsIds.remove(idUser);
 		}
-		renderJSON(new Message(MessageType.SUCCESS, "Logout efetuado com sucesso."));
+		redirect(Play.configuration.getProperty("webradio.authentication.url.logout"));
+	}
+	
+	public static User getUserAuthenticated(){
+		return (User) Cache.get(session.getId());
 	}
 }

@@ -11,15 +11,22 @@
 
 	CONFIG.URL_BASE = "http://localhost:9000/";
 	
-	var musicasApp = angular.module('musicasApp', ['ngResource']);
+	var app = angular.module('app', ['ngResource']);
 	
-	musicasApp.controller('MusicasController', function($resource, $scope) {
+	app.controller('AppController', function($resource, $scope) {
 		
 		var musicsService = $resource(CONFIG.URL_BASE + "musics");			
 		
 		var data = musicsService.query({}, function(){
 			$scope.musics= data;
 		});
+		
+		var usersService = $resource(CONFIG.URL_BASE + "users/logged");			
+		
+		var user = usersService.get({}, function(){
+			$scope.user = user;
+		});
 	});
 
+	
 })();
