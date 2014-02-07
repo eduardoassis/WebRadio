@@ -5,7 +5,6 @@ logs/*
 .settings
 eclipse/*
 lib/*
-modules/*
 test-result/*
 app/tmp/*
 cobertura.ser
