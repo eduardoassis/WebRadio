@@ -29,7 +29,7 @@ GET     /music/{filtro}              		    Musics.getMusic
 
 # Secure
 
-GET    /logout                                  WebRadioSecure.signOut
+GET    /signOut/{idUser}                         WebRadioSecure.signOut
 
 *      /                                        module:secure
 

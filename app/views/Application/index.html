@@ -36,13 +36,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">WebRadio</a>
+          <a class="navbar-brand" href="http://localhost:9000/">WebRadio</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
-            <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i> Músicas</a></li>
+            <li class="active"><a href="http://localhost:9000/"><i class="fa fa-dashboard"></i> Músicas</a></li>
             
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Dropdown <b class="caret"></b></a>
@@ -63,7 +63,7 @@
                 <li><a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge">7</span></a></li>
                 <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
                 <li class="divider"></li>
-                <li><a href="Http://localhost:9000/logout"><i class="fa fa-power-off"></i> Log Out</a></li>
+                <li><a ng-href="http://localhost:9000/signOut/{{user.id}}"><i class="fa fa-power-off"></i> Log Out</a></li>
               </ul>
             </li>
           </ul>
@@ -231,12 +231,11 @@
 		 			<td>{{music.nome}}</td>
 		 			<td>{{music.artista}}</td>
 		 			<td>{{music.album}}</td>
-		 			<!-- <td>
+					<td>
 		 				<audio controls>
-  							<source ng-src='http://localhost:9000/musics/{{music.id}}/music.mp3' type="audio/mpeg">
+  							<source ng-src="http://localhost:9000/musics/{{music.id}}/music.mp3" type="audio/mpeg">
 						</audio>
-		 				</td>
-		 			 -->
+	 				</td>
                  </tr>                  
                </tbody>
              </table>
