@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.util.List;
 
 import models.Music;
+import play.mvc.Http;
 import play.mvc.With;
 
 @With(WebRadioSecure.class)
@@ -47,7 +48,8 @@ public class Musics extends DefaultController {
 		
 		try {
 			InputStream inputStream = new FileInputStream(file);
-			request.current().contentType = "audio/mpeg";
+			response.current().contentType = "audio/mpeg";
+			response.status = 200;
 			renderBinary(inputStream);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

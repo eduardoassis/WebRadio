@@ -11,7 +11,7 @@
 
 	CONFIG.URL_BASE = "http://localhost:9000/";
 	
-	var app = angular.module('app', ['ngResource']);
+	var app = angular.module('app', ['ngResource','audioPlayer']);
 	
 	app.controller('AppController', function($resource, $scope) {
 		

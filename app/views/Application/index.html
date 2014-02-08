@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="@{'/public/css/morris-0.4.3.min.css'}">
     <script src="@{'/public/lib/angular/angular.js'}"></script>
     <script src="@{'/public/lib/angular/angular-resource.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+    <script src="@{'/public/lib/angular/angular-audio-player.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
     
     <script src="@{'/public/javascripts/AppController.js'}" type="text/javascript" charset="${_response_encoding}"></script>
   </head>
@@ -222,7 +223,6 @@
                    <th> Nome <i class="fa fa-sort"></i></th>
                    <th> Artista <i class="fa fa-sort"></i></th>
                    <th> Álbum <i class="fa fa-sort"></i></th>
-                   <th> Escutar <i class="fa fa-sort"></i></th>
                  </tr>
                </thead>
                <tbody ng-repeat="music in musics | filter:query">
@@ -231,14 +231,16 @@
 		 			<td>{{music.nome}}</td>
 		 			<td>{{music.artista}}</td>
 		 			<td>{{music.album}}</td>
-					<td>
-		 				<audio controls>
-  							<source ng-src="http://localhost:9000/musics/{{music.id}}/music.mp3" type="audio/mpeg">
-						</audio>
-	 				</td>
                  </tr>                  
                </tbody>
              </table>
+             
+             <audio data-player-control="audio1" data-player-name="audio1" audio-player>
+  				<source src="http://upload.wikimedia.org/wikipedia/en/d/d0/Rick_Astley_-_Never_Gonna_Give_You_Up.ogg" type="audio/ogg">
+			</audio>
+			<span ng-show="audio1.playing">Player status: Playing</span>
+			<span ng-show="!audio1.playing">Player status: Paused</span>
+             
             </div>
           </div>
           
@@ -386,6 +388,7 @@
     </div><!-- /#wrapper -->
 
     <!-- JavaScript -->
+    <script src="@{'/public/js/jquery.min.map'}"></script>
     <script src="@{'/public/js/jquery-1.10.2.js'}"></script>
     <script src="@{'/public/js/bootstrap.js'}"></script>
 
