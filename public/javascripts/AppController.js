@@ -11,7 +11,7 @@
 
 	CONFIG.URL_BASE = "http://localhost:9000/";
 	
-	var app = angular.module('app', ['ngResource','audioPlayer']);
+	var app = angular.module('app', ['ngResource']);
 	
 	app.controller('AppController', function($resource, $scope) {
 		
@@ -26,7 +26,13 @@
 		var user = usersService.get({}, function(){
 			$scope.user = user;
 		});
+		
+		$scope.selectedMusic = function(music) {
+			
+			$('.selectedMusic').removeClass('selectedMusic');
+			$('#' + music.id).addClass('selectedMusic');
+		};
 	});
 
 	
-})();
+})($);
