@@ -1,0 +1,41 @@
+#{extends 'Secure/layout.html' /}
+
+<div id="login">
+	<h1>&{'secure.title'}</h1>
+		
+	#{form @WebRadioSecure.signIn()}
+		
+		#{if flash.error}
+			<p class="error">
+				Hello
+				&{flash.error}
+			</p>
+		#{/if}
+		#{if flash.success}
+			<p class="success">
+				&{flash.success}
+			</p>
+		#{/if}
+	
+		<p id="username-field">
+			<label for="username">E-mail</label>
+			<input type="text" name="email" id="email" value="${flash.email}" />
+		</p>
+		<p id="password-field">
+			<label for="password">Senha</label>
+			<input type="password" name="password" id="password" value="" />
+		</p>
+		<p id="remember-field">
+			<input type="checkbox" name="remember" id="remember" value="true" ${flash.remember ? 'checked="true"' : ''} />
+			<label for="remember">Lembrar</label>
+		</p>
+		<p id="signin-field">
+			<input type="submit" id="signin" value="&{'secure.signin'}" />
+		</p>
+	#{/form}
+	<div style="text-align: right;">
+		<form style="text-align: right;" action="http://localhost:9000/users/new" method="get">
+    		<input type="submit" value="Sua primeira vez por aqui?">
+		</form>
+	</div>
+</div>

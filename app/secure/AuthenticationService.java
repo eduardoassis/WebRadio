@@ -6,7 +6,7 @@ import play.mvc.Http.Request;
 public class AuthenticationService {
 
 	public User signIn(Request request){
-		String email = request.params.get("username");
+		String email = request.params.get("email");
 		String password = request.params.get("password");
 		
 		User user = User.find("byEmailAndPassword", email, password).first();

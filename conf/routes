@@ -3,10 +3,10 @@
 # ~~~~
 
 # Home page
+
+GET     /signin                                 Application.signIn
 GET     /                                       Application.index
-GET     /playList                               Application.playList
-GET     /musicas                                Application.musicas
-GET     /contato                                Application.contato
+GET     /users/new                              Application.cadastroUsuario
 
 GET     /home                                   Streaming.getPage
 
@@ -30,8 +30,6 @@ GET     /music/{filtro}              		    Musics.getMusic
 # Secure
 
 GET    /signOut/{idUser}                         WebRadioSecure.signOut
-
-*      /                                        module:secure
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

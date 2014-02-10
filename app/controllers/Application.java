@@ -7,14 +7,22 @@ import java.util.*;
 
 import models.*;
 
-@With(WebRadioSecure.class)
 public class Application extends Controller {
 
-	public static void login(){
-		render();
+	@Before(unless = {"cadastroUsuario", "signIn"})
+	private static void authenticate(){
+		WebRadioSecure.authenticate();
 	}
 	
     public static void index() {
         render();
+    }
+    
+    public static void cadastroUsuario(){
+    	render();
+    }
+    
+    public static void signIn(){
+    	render();
     }
 }
