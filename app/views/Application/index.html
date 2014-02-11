@@ -90,6 +90,19 @@
           </div>
         </div><!-- /.row -->
 
+		<div class="row">
+		
+			<div class="col-lg-6">
+    			<div class="input-group">
+      				<input id="search" type="text" class="form-control">
+      				<span class="input-group-btn">
+        				<button class="btn btn-default" onClick="teste(this)" type="button">Buscar!</button>
+      				</span>
+    			</div>
+  			</div>
+		
+		</div>
+
         <div class="row">
           <div class="col-lg-6">
             <h2>Músicas</h2>
@@ -140,6 +153,12 @@
     <script src="@{'/public/js/webradio-min.js'}"></script>
     <script src="@{'/public/js/morris-0.4.3.min.js'}"></script>
     <script src="@{'/public/js/morris/chart-data-morris.js'}"></script>
+
+	<script type="text/javascript">
+		var teste = function(object){
+			alert($('#search'))
+		}
+	</script>
 
   </body>
 </html>
