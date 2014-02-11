@@ -54,14 +54,17 @@
 		$scope.getMusics = function(idInput){
 			
 			
+			if($('#' + idInput).val() != "") {
+				var musicService = $resource(CONFIG.URL_BASE + "musics/filter/" + $('#' + idInput).val());
 			
-			var musicService = $resource(CONFIG.URL_BASE + "musics/filter/" + $('#' + idInput).val());
-			
-			var data = musicService.query({}, function(){
-				//if(data.length > 0) {
+				var data = musicService.query({}, function(){
 					$scope.musics= data;
-				//}
-			});
+				});
+			} else {
+				var data = musicsService.query({}, function(){
+					$scope.musics= data;
+				});
+			}
 		}
 	});
 
