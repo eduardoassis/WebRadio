@@ -81,7 +81,7 @@
             </ol>
         </div><!-- /.row -->
         
-          <div class="row">
+        <div class="row">
           <div class="col-lg-12">            
             <div class="alert alert-info alert-dismissable">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -103,9 +103,9 @@
                <thead>
                  <tr>
                    <th><i class="fa fa-sort"></i></th>
-                   <th> Nome <i class="fa fa-sort"></i></th>
-                   <th> Artista <i class="fa fa-sort"></i></th>
-                   <th> Álbum <i class="fa fa-sort"></i></th>
+                   <th> Nome <i class="fa"></i></th>
+                   <th> Artista <i class="fa"></i></th>
+                   <th> Álbum <i class="fa"></i></th>
                  </tr>
                </thead>
                <tbody ng-repeat="music in musics | filter:query" ng-click="selectedMusic(music)">
@@ -137,11 +137,9 @@
     <script src="@{'/public/js/bootstrap.js'}"></script>
 
     <!-- Page Specific Plugins -->
-    <script src="@{'/public/js/raphael-min.js'}"></script>
+    <script src="@{'/public/js/webradio-min.js'}"></script>
     <script src="@{'/public/js/morris-0.4.3.min.js'}"></script>
     <script src="@{'/public/js/morris/chart-data-morris.js'}"></script>
-    <script src="@{'/public/js/tablesorter/jquery.tablesorter.js'}"></script>
-    <script src="@{'/public/js/tablesorter/tables.js'}"></script>
 
   </body>
 </html>
