@@ -44,6 +44,7 @@
 			
 			var audio = document.createElement('audio');
 			audio.setAttribute('controls');
+			audio.setAttribute('autoplay');
 			
 			audio.appendChild(source);
 			
