@@ -90,50 +90,35 @@
           </div>
         </div><!-- /.row -->
 
-		<div class="row">
-		
-			<div class="col-lg-6">
-    			<div class="input-group">
-      				<input id="search" type="text" class="form-control">
-      				<span class="input-group-btn">
-        				<button class="btn btn-default" onClick="teste(this)" type="button">Buscar!</button>
-      				</span>
-    			</div>
-  			</div>
-		
-		</div>
+		<div id="audio" class="text-right"></div>
 
         <div class="row">
           <div class="col-lg-6">
-            <h2>Músicas</h2>
+            <h2>Músicas</h2> 
             <div class="table-responsive">
-            
-            <div id="input-group" class="input-group">
-  				<span class="input-group-addon"><img src="@{'/public/images/search.png'}"></span>
-  				<input type="text" class="form-control" placeholder="Pesquisar" ng-model="query">
-			</div>
-             <table class="table table-bordered tablesorter">
-               <thead>
-                 <tr>
-                   <th><i class="fa fa-sort"></i></th>
-                   <th> Nome <i class="fa"></i></th>
-                   <th> Artista <i class="fa"></i></th>
-                   <th> Álbum <i class="fa"></i></th>
-                 </tr>
-               </thead>
-               <tbody ng-repeat="music in musics | filter:query" ng-click="selectedMusic(music)">
-               	<tr id="{{music.id}}" style="cursor:pointer">
-           			<td>{{music.id}}</td>
-		 			<td>{{music.nome}}</td>
-		 			<td>{{music.artista}}</td>
-		 			<td>{{music.album}}</td>
-                 </tr>                  
-               </tbody>
-             </table>
-             
-            <audio data-player-control="audio1" data-playlist="playlist1" audio-player>
-  				<source ng-href="{{path}}" type="audio/mpeg">
-			</audio>
+            	
+	            <div id="input-group" class="input-group">
+	  				<span class="input-group-addon"><img src="@{'/public/images/search.png'}"></span>
+	  				<input type="text" class="form-control" placeholder="Pesquisar" ng-model="query">
+				</div>
+	             <table class="table table-bordered tablesorter">
+	               <thead>
+	                 <tr>
+	                   <th><i class="fa fa-sort"></i></th>
+	                   <th> Nome <i class="fa"></i></th>
+	                   <th> Artista <i class="fa"></i></th>
+	                   <th> Álbum <i class="fa"></i></th>
+	                 </tr>
+	               </thead>
+	               <tbody ng-repeat="music in musics | filter:query" ng-click="selectedMusic(music)">
+	               	<tr id="{{music.id}}" style="cursor:pointer">
+	           			<td>{{music.id}}</td>
+			 			<td>{{music.nome}}</td>
+			 			<td>{{music.artista}}</td>
+			 			<td>{{music.album}}</td>
+	                 </tr>                  
+	               </tbody>
+	             </table>
             </div>
           </div>
           
@@ -153,12 +138,6 @@
     <script src="@{'/public/js/webradio-min.js'}"></script>
     <script src="@{'/public/js/morris-0.4.3.min.js'}"></script>
     <script src="@{'/public/js/morris/chart-data-morris.js'}"></script>
-
-	<script type="text/javascript">
-		var teste = function(object){
-			alert($('#search'))
-		}
-	</script>
 
   </body>
 </html>
