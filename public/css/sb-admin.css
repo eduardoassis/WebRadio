@@ -19,6 +19,10 @@ body {
   padding: 5px 15px;
 }
 
+image-music {
+	background-image: url("@{'/public/images/fundo.jpg'}");
+}
+
 /* Nav Messages */
 
 .messages-dropdown .dropdown-menu .message-preview .avatar,

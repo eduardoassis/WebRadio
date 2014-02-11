@@ -24,9 +24,9 @@
   </head>
 
   <body ng-controller="AppController">
-
+	
     <div id="wrapper">
-
+		
       <!-- Sidebar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -42,19 +42,6 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav side-nav">
-            <li class="active"><a href="http://localhost:9000/"><i class="fa fa-dashboard"></i> Músicas</a></li>
-            
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Dropdown Item</a></li>
-                <li><a href="#">Another Item</a></li>
-                <li><a href="#">Third Item</a></li>
-                <li><a href="#">Last Item</a></li>
-              </ul>
-            </li>
-          </ul>
 
           <ul class="nav navbar-nav navbar-right navbar-user">                        
             <li class="dropdown user-dropdown">
@@ -70,72 +57,70 @@
           </ul>
         </div><!-- /.navbar-collapse -->
       </nav>
-
-      <div id="page-wrapper">
-
-        <div class="row">
-          <div class="col-lg-12">
-            <h1>Web Rádio <small>Statistics Overview</small></h1>
-            <ol class="breadcrumb">
-              <li class="active"><i class="fa fa-dashboard"></i> Web Rádio</li>
-            </ol>
-            
-        </div><!-- /.row -->
-        
-        <div class="row">
-          <div class="col-lg-12">            
-            <div class="alert alert-info alert-dismissable">
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                Abaixo, você pode realizar suas consultas por músicas.
-            </div>
-          </div>
-        </div><!-- /.row -->
-
-        <div class="row">
-       	  	<form class="navbar-form navbar-left" role="search">
-				<div class="form-group">
-					<input id="filter" type="text" class="form-control" />
-				</div> 
-				<button type="submit" ng-click="getMusics('filter')" class="btn btn-default">Submit</button>
-			</form>
-        </div>  
-		<div id="audio" class="text-right"></div>
-
-        <div class="row">
-          <div class="col-lg-6">
-            <h2>Músicas</h2> 
-            <div class="table-responsive">
-            	
-	            <div id="input-group" class="input-group">
-	  				<span class="input-group-addon"><img src="@{'/public/images/search.png'}"></span>
-	  				<input type="text" class="form-control" placeholder="Pesquisar" ng-model="query">
-				</div>
-	             <table class="table table-bordered tablesorter">
-	               <thead>
-	                 <tr>
-	                   <th><i class="fa fa-sort"></i></th>
-	                   <th> Nome <i class="fa"></i></th>
-	                   <th> Artista <i class="fa"></i></th>
-	                   <th> Álbum <i class="fa"></i></th>
-	                 </tr>
-	               </thead>
-	               <tbody ng-repeat="music in musics | filter:query" ng-click="selectedMusic(music)">
-	               	<tr id="{{music.id}}" style="cursor:pointer">
-	           			<td>{{music.id}}</td>
-			 			<td>{{music.nome}}</td>
-			 			<td>{{music.artista}}</td>
-			 			<td>{{music.album}}</td>
-	                 </tr>                  
-	               </tbody>
-	             </table>
-            </div>
-          </div>
-          
-        </div><!-- /.row -->
-
-        
+		
+		
+		
+      <div id="wrapper">
+		
+	        <div class="row">
+	          <div class="col-lg-12">
+	            <h2>Web Rádio <small>Aqui você ouve as melhores músicas <img src="@{'/public/images/disco.png'}"></img></small></h2>            
+	        </div><!-- /.row -->
+	        
+	        <div class="row">
+	          <div class="col-lg-12">            
+	            <div class="alert alert-info alert-dismissable">
+	              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	                Abaixo, você pode realizar suas consultas por músicas.
+	            </div>
+	          </div>
+	        </div><!-- /.row -->
+	
+	        <div class="row">
+	       	  	<form class="navbar-form navbar-left" role="search">
+					<div class="form-group">
+						<input id="filter" type="text" class="form-control" />
+					</div> 
+					<button type="submit" ng-click="getMusics('filter')" class="btn btn-primary">
+						Pesquisar 			
+					</button>
+				</form>
+	        </div>  
+			<div id="audio" class="text-right"></div>
+	
+	        <div class="row">
+	          <div class="col-lg-6">
+	            <h2>Músicas</h2> 
+	            <div class="table-responsive">
+	            	
+		            <div id="input-group" class="input-group">
+		  				<span class="input-group-addon"><img src="@{'/public/images/search.png'}"></span>
+		  				<input type="text" class="form-control" placeholder="Pesquisar" ng-model="query">
+					</div>
+		             <table class="table table-bordered tablesorter">
+		               <thead>
+		                 <tr>
+		                   <th> Nome <i class="fa"></i></th>
+		                   <th> Artista <i class="fa"></i></th>
+		                   <th> Álbum <i class="fa"></i></th>
+		                   <th>Ouvir Música</th>
+		                 </tr>
+		               </thead>
+		               <tbody ng-repeat="music in musics | filter:query">
+		               	<tr id="{{music.id}}" style="cursor:pointer">
+				 			<td>{{music.nome}}</td>
+				 			<td>{{music.artista}}</td>
+				 			<td>{{music.album}}</td>
+		           			<td style="text-align: center;" ng-click="selectedMusic(music)"><img src="@{'/public/images/play.png'}"></img></td>
+		                 </tr>                  
+		               </tbody>
+		             </table>
+	            </div>
+	          </div>
+	          
+	        </div><!-- /.row -->
       
-      </div><!-- /#page-wrapper -->
+      </div>
 
     </div><!-- /#wrapper -->
 

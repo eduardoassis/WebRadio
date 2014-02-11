@@ -2410,7 +2410,7 @@ input[type="button"].btn-block {
   content: "\e002";
 }
 .glyphicon-search:before {
-  content: "\e003";
+  content: "@{'\e003'}";
 }
 .glyphicon-heart:before {
   content: "\e005";
