@@ -14,10 +14,6 @@ body {
   margin-top: 50px;
 }
 
-#wrapper {
-  padding-left: 0;
-}
-
 #page-wrapper {
   width: 100%;
   padding: 5px 15px;
@@ -89,7 +85,13 @@ table.tablesorter thead tr th:hover {
   /* Wrappers */
 
   #wrapper {
-	padding-left: 225px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/* Negative indent footer by its height */
+	margin: 0 auto -110px;
+	/* Pad bottom by footer height */
+	padding: 0 110px 0 110px;
   }
 
   #page-wrapper {
