@@ -28,8 +28,8 @@ public class Musics extends DefaultController {
 		
 		returnIfNull(filtro);
 		
-		Music music = Music.getMusic(filtro);
-		renderJSON(music);
+		List<Music> musics= Music.getMusic(filtro);
+		renderJSON(musics);
 	}
 	
 	public static void getMusicById(Long id) {

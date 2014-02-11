@@ -25,7 +25,7 @@ GET     /musics                                 Musics.list
 GET     /musics/{id}/url	                    Musics.getUrlMusic
 GET     /musics/{id}	                        Musics.getMusicById
 GET     /musics/{id}/music.mp3                  Musics.getMusicMp3
-GET     /music/{filtro}              		    Musics.getMusic
+GET     /musics/filter/{filtro}        		    Musics.getMusic
 
 # Secure
 

@@ -49,7 +49,20 @@
 			audio.appendChild(source);
 			
 			divAudio.appendChild(audio);
-		};		
+		};	
+		
+		$scope.getMusics = function(idInput){
+			
+			
+			
+			var musicService = $resource(CONFIG.URL_BASE + "musics/filter/" + $('#' + idInput).val());
+			
+			var data = musicService.query({}, function(){
+				//if(data.length > 0) {
+					$scope.musics= data;
+				//}
+			});
+		}
 	});
 
 	

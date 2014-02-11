@@ -79,6 +79,7 @@
             <ol class="breadcrumb">
               <li class="active"><i class="fa fa-dashboard"></i> Web Rádio</li>
             </ol>
+            
         </div><!-- /.row -->
         
         <div class="row">
@@ -90,6 +91,14 @@
           </div>
         </div><!-- /.row -->
 
+        <div class="row">
+       	  	<form class="navbar-form navbar-left" role="search">
+				<div class="form-group">
+					<input id="filter" type="text" class="form-control" />
+				</div> 
+				<button type="submit" ng-click="getMusics('filter')" class="btn btn-default">Submit</button>
+			</form>
+        </div>  
 		<div id="audio" class="text-right"></div>
 
         <div class="row">
