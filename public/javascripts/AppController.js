@@ -33,6 +33,10 @@
 			$('#' + music.id).addClass('selectedMusic');
 			
 			var divAudio = document.getElementById('audio');
+
+			while (divAudio.hasChildNodes()){
+			    divAudio.removeChild(divAudio.lastChild);
+			}
 			
 			var source = document.createElement('source');
 			source.type = 'audio/mpeg';
