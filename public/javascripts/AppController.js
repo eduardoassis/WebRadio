@@ -15,7 +15,7 @@
 	
 	app.controller('AppController', function($resource, $scope) {
 		
-		var musicsService = $resource(CONFIG.URL_BASE + "musics");			
+		var musicsService = $resource(CONFIG.URL_BASE + "musics");		
 		
 		var data = musicsService.query({}, function(){
 			$scope.musics= data;
@@ -31,7 +31,20 @@
 			
 			$('.selectedMusic').removeClass('selectedMusic');
 			$('#' + music.id).addClass('selectedMusic');
-		};
+			
+			var divAudio = document.getElementById('audio');
+			
+			var source = document.createElement('source');
+			source.type = 'audio/mpeg';
+			source.src = CONFIG.URL_BASE + 'musics/' + music.id + '/music.mp3';
+			
+			var audio = document.createElement('audio');
+			audio.setAttribute('controls');
+			
+			audio.appendChild(source);
+			
+			divAudio.appendChild(audio);
+		};		
 	});
 
 	
